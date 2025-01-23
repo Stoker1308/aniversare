@@ -5,6 +5,17 @@
     <title>Title</title>
     <link rel="stylesheet" href="Flori.css"> <!-- Link to the CSS file -->
     <script src="Flori.js"></script>
+<style>
+        /* Adăugăm stilul pentru fade-in pe text */
+        .text-container {
+            opacity: 0; /* Textul este ascuns inițial */
+            transition: opacity 2s ease-in-out; /* Efect de fade-in */
+        }
+
+        .text-visible {
+            opacity: 1; /* Textul devine vizibil */
+        }
+    </style>
 </head>
 <body class="not-loaded">
 <div class="night"></div>
@@ -13,6 +24,12 @@
 <div class="text-container">
     <p>Aceste flori sunt doar o mică parte din ceea ce meriți, iubirea mea! Te iubesc mai mult decât pot spune cuvintele ❤️.</p>
 </div>
+    <script>
+        // După 10 secunde, adăugăm clasa care face textul vizibil
+        setTimeout(function() {
+            document.querySelector('.text-container').classList.add('text-visible');
+        }, 10000); // 10 secunde
+    </script>
 <div class="flowers">
     <!-- Conținutul florilor rămâne neschimbat -->
 </div>
